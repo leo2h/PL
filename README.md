@@ -1,2 +1,3 @@
-# pl-cheatsheets
-Programming Language Cheatsheets.
+# Programming Language Cheatsheets
+
+The cheatsheet for programming languages.
