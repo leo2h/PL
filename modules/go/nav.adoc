@@ -1,2 +1,0 @@
-* xref:install.adoc[安装 Go 语言开发环境]
-* xref:keywords.adoc[Go 语言关键字]

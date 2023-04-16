@@ -1,1 +1,23 @@
-= 安装
+= 安装 Go
+
+https://go.dev/dl/[访问这里]下载二进制包， https://go.dev/doc/install[这里]是官网的安装指南。
+
+== Linux
+
+1. 删除之前安装的 Go 版本，然后解压下载的二进制包：
+
+[source,shell]
+----
+$ rm /usr/local/go
+$ tar -C /usr/local -xzf go1.20.3.linux-amd64.tar.gz
+----
+
+[start=2]
+. 添加 `/usr/local/go/bin` 到 `PATH` 环境变量中
+. 验证 Go 是否安装成功
+
+[source,shell]
+----
+$ go version
+go version go1.20.3 linux/amd64
+----
