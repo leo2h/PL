@@ -1,58 +1,26 @@
 = Go 语言
 
-== Quick Start
+== &sect; 关键词
 
-1. 创建一个单独的目录，并切换到这个目录中
-2. 初始化 `go.mod` 用于保存依赖信息
+[format=csv]
+|===
+break,default,func,interface,select
+case,defer,go,map,struct
+chan,else,goto,package,switch
+const,fallthrough,if,range,type
+continue,for,import,return,var
+|===
 
-[source,shell]
-----
-$ go mod init example/hello
-----
+== &sect; 数据类型
 
-[start=3]
-3. 创建一个 `hello.go` 文件：
+[format=csv]
+|===
+string,int
+|===
 
-[source,golang]
-----
-package main
+== &sect; 操作符
 
-import "fmt"
-
-func main() {
-    fmt.Println("Hello World")
-}
-----
-
-[start=4]
-4. 运行
-
-[source,shell]
-----
-$ go run .
-Hello World
-----
-
-=== 使用第三方库
-
-1. 修改 `hello.go`：
-
-[source,golan]
-----
-package main
-
-import "fmt"
-import "rst.io/quote" // 引入 rsc.io/quote 包
-
-func main() {
-    fmt.Println(quote.Go())
-}
-----
-
-[start=2]
-2. 安装依赖项
-
-[source,shell]
-----
-$ go mod tidy
-----
+[format=csv]
+|===
+:=,=,+,-,*
+|===
