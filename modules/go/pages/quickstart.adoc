@@ -1,0 +1,57 @@
+= Quickstart
+
+1. 创建一个单独的目录，并切换到这个目录中
+2. 初始化 `go.mod` 用于保存依赖信息
+
+[source,shell]
+----
+$ go mod init example/hello
+----
+
+[start=3]
+. 创建一个 `hello.go` 文件：
+
+[source,golang]
+----
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello World")
+}
+----
+
+[start=4]
+. 运行
+
+[source,shell]
+----
+$ go run .
+Hello World
+----
+
+== 使用第三方库
+
+1. 修改 `hello.go`：
+
+[source,golang]
+----
+package main
+
+import "fmt"
+import "rst.io/quote" // 引入 rsc.io/quote 包
+
+func main() {
+    fmt.Println(quote.Go())
+}
+----
+
+[start=2]
+. 安装依赖项
+
+[source,shell]
+----
+$ go mod tidy
+$ go run .
+----
