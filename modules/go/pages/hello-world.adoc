@@ -1,4 +1,4 @@
-= Quickstart
+= Hello, World
 
 1. 创建一个单独的目录，并切换到这个目录中
 2. 初始化 `go.mod` 用于保存依赖信息

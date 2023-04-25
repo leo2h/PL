@@ -1,0 +1,7 @@
+= 基础语法
+
+.基础语法
+[source,golang]
+----
+include::example$basics.go[]
+----
