@@ -2,3 +2,4 @@
 ** xref:go:install.adoc[]
 ** xref:go:hello-world.adoc[]
 ** xref:go:basics.adoc[]
+** xref:go:syntax-for.adoc[]
