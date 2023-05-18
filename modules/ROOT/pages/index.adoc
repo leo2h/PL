@@ -1,0 +1,3 @@
+= 语言列表
+
+* xref:go:index.adoc[]

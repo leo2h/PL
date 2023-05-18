@@ -176,7 +176,7 @@ func slice_examples_5() {
 // end::slice-7[]
 }
 
-func slice_examples_5() {
+func slice_examples_6() {
 // tag::slice-8[]
   var s []int
   printSlice("s", s)
@@ -193,4 +193,48 @@ func slice_examples_5() {
   s = append(s, 2, 3, 4)
   printSlice("s", s)
 // end::slice-8[]
+}
+
+// tag::map-1[]
+type Location struct {
+  Lat, Long float64
+}
+
+func map_examples_1() {
+  var m map[string]Location     // <1>
+  m = make(map[string]Location) // <2>
+  m["Bell Labs"] = Location{
+    40.68433, -74.39967,
+  }
+  fmt.Println(m["Bell Labs"])
+}
+// end::map-1[]
+
+func map_examples_2() {
+// tag::map-2[]
+  var m = map[string]Location{ // <1>
+    "Bell Labs": Location{
+      40.68433, -74.39967,
+    },
+    "Google": { // <2>
+      37.42202, -122.08408,
+    },
+  }
+  fmt.Println(m)
+// end::map-2[]
+}
+
+func map_examples_3() {
+// tag::map-3[]
+  m := make(map[string]int) // <1>
+
+  m["Answer"] = 48 // <2>
+  fmt.Println("The value:", m["Answer"])
+
+  delete(m, "Answer") // <3>
+  fmt.Println("The value:", m["Answer"])
+
+  v, ok := m["Answer"] // <4>
+  fmt.Println("The value:", v, "Present?", ok)
+// end::map-3[]
 }

@@ -6,11 +6,22 @@ func main() {
   fmt.Println(">>>>>> hello <<<<<<")
   hello()
 
+  fmt.Println(">>>>>> `func` keyword <<<<<<")
+  h, w := swap("Hello", "World")
+  fmt.Println(h, w, Mul(1, 1))
+
+  fmt.Println("\n>>>>>> `var` keyword <<<<<<")
+  var_examples_1()
+  var_examples_2()
+
   fmt.Println("\n>>>>>> `const` keyword <<<<<<")
   const_examples()
 
   fmt.Println("\n>>>>>> `for` keyword <<<<<<")
   for_examples()
+
+  fmt.Println("\n>>>>>> `range` keyword <<<<<<")
+  range_examples()
 
   fmt.Println("\n>>>>>> `if` keyword <<<<<<")
   if_examples()
@@ -32,4 +43,9 @@ func main() {
   slice_examples_2()
   slice_examples_3()
   slice_examples_4()
+  slice_examples_5()
+  slice_examples_6()
+
+  fmt.Println("\n>>>>>> `map` syntax <<<<<<")
+  map_examples_1()
 }
