@@ -48,4 +48,14 @@ func main() {
 
   fmt.Println("\n>>>>>> `map` syntax <<<<<<")
   map_examples_1()
+
+  fmt.Println("\n>>>>>> methods syntax <<<<<<")
+  methods_examples_1()
+  methods_examples_2()
+  methods_examples_3()
+
+  fmt.Println("\n>>>>>> interface syntax <<<<<<")
+  interface_examples_1()
+  interface_examples_2()
+  interface_examples_3()
 }

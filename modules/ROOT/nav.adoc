@@ -3,3 +3,5 @@
 ** xref:go:hello-world.adoc[]
 ** xref:go:basics.adoc[]
 ** xref:go:datatypes.adoc[]
+** xref:go:methods.adoc[]
+** xref:go:interfaces.adoc[]
