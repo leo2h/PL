@@ -58,4 +58,13 @@ func main() {
   interface_examples_1()
   interface_examples_2()
   interface_examples_3()
+
+  fmt.Println("\n>>>>>> goroutine syntax <<<<<<")
+  goroutine_examples_1()
+  goroutine_examples_2()
+  goroutine_examples_3()
+  goroutine_examples_4()
+  goroutine_examples_5()
+  goroutine_examples_6()
+  goroutine_examples_7()
 }

@@ -5,3 +5,4 @@
 ** xref:go:datatypes.adoc[]
 ** xref:go:methods.adoc[]
 ** xref:go:interfaces.adoc[]
+** xref:go:goroutines.adoc[]
