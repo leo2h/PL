@@ -1,0 +1,14 @@
+site:
+  url: https://leo2h.github.io
+  title: LeoZh's Studio
+  start_page: ROOT::index.adoc
+  robots: allow
+content:
+  sources:
+  - url: .
+    branches: HEAD
+ui:
+  bundle:
+    url: https://github.com/leo2h/antora-ui-default/files/11199866/ui-bundle.zip
+    snapshot: true
+
