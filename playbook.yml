@@ -1,8 +1,11 @@
 site:
   url: https://leo2h.github.io
   title: LeoZh's Studio
-  start_page: ROOT::index.adoc
+  start_page: PL::index.adoc
   robots: allow
+asciidoc:
+  extensions:
+  - asciidoctor-kroki
 content:
   sources:
   - url: .

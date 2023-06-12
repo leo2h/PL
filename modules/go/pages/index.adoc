@@ -1,58 +1,36 @@
 = Go 语言
 
-== &sect; 关键词
+== 关键词
 
 [cols="1,1,1,1,1"]
 |===
-|break
-|default
-|func
+|xref:basic-syntax.adoc#for-keyword[`break`]
+|xref:basic-syntax.adoc#switch-keyword[`default`]
+|xref:basic-syntax.adoc#func-keyword[`func`]
 |interface
-|select
+|xref:basic-syntax.adoc#select-keyword[`select`]
 
-|case
-|defer
+|xref:basic-syntax.adoc#switch-keyword[`case`]
+|xref:basic-syntax.adoc#defer-keyword[`defer`]
 |go
 |map
 |struct
 
-
 |chan
-|else
-|goto
-|package
-|switch
+|xref:basic-syntax.adoc#if-keyword[`if`]
+|xref:basic-syntax.adoc#goto-keyword[`goto`]
+|xref:basic-syntax.adoc#package-keyword[`package`]
+|xref:basic-syntax.adoc#switch-keyword[`switch`]
 
-|const
-|fallthrough
-|if
-|range
+|xref:basic-datatypes.adoc#const-keyword[`const`]
+|xref:basic-syntax.adoc#fallthrough-keyword[`fallthrough`]
+|xref:basic-syntax.adoc#if-keyword[`if`]
+|xref:basic-syntax.adoc#range-keyword[`range`]
 |type
 
-|continue
-|for
-|import
-|return
-|var
-|===
-
-== &sect; 基本类型
-
-* `bool`
-* `string`
-* `int`
-** `int8`, `int16`, `int32`, `int64`
-* `uint`
-** `uint8`, `uint16`, `uint32`, `uint64`
-* `uintptr`
-* `byte`
-* `rune`
-* `float32`, `float64`
-* `complex64`, `complex128`
-
-== &sect; 操作符
-
-[format=csv]
-|===
-:=,=,+,-,*
+|xref:basic-syntax.adoc#continue-keyword[`continue`]
+|xref:basic-syntax.adoc#for-keyword[`for`]
+|xref:basic-syntax.adoc#import-keyword[`import`]
+|xref:basic-syntax.adoc#func-keyword[`return`]
+|xref:basic-datatypes.adoc#var-keyword[`var`]
 |===

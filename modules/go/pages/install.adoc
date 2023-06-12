@@ -1,4 +1,4 @@
-= 安装 Go
+= 安装
 
 https://go.dev/dl/[访问这里]下载二进制包， https://go.dev/doc/install[这里]是官网的安装指南。
 

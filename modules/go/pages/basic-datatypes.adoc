@@ -1,0 +1,73 @@
+= 基本数据类型
+
+== 声明变量
+
+[#var-keyword]
+=== 使用 `var` 关键字
+
+在 `Go` 中，如果一个名字以大写字母开头，那么它就是已导出的。例如，`Pizza` 就是个已导出名 `Pi` 也同样，它导出自 `math` 包。`pizza` 和 `pi` 并未以大写字母开头，所以它们是未导出的。在导入一个包时，你只能引用其中已导出的名字。任何“未导出”的名字在该包外均无法访问。
+
+（参考 http://blog.go-zh.org/gos-declaration-syntax[这篇] 关于 `Go` 语法声明的文章了解这种类型声明形式出现的原因。）
+
+[source,golang]
+----
+var var_in_package int
+
+func main() {
+    var i int           // <1>
+    var f float32 = 1.0 // <2>
+}
+----
+<1> 没有指定初始值的声明，会使用对应类型的“零值”初始化变量，而不是保留变量的未初始化状态
+<2> 给定变量的初始值
+
+=== 短变量声明
+
+[source,golang]
+----
+func main() {
+    i := 1   // i 为 int 类型
+    f := 1.0 // f 为 float64 类型
+}
+----
+
+== `Go` 语言中的基本数据类型及其零值
+
+[source,golang]
+----
+include::example$zeros.go[]
+----
+<1> alias of `uint8`
+<2> alias of `uint32`
+
+== 类型转换
+
+表达式 `T(v)` 将值 `v` 转换为类型 `T`。
+
+[source,golang]
+----
+var i32 int 1
+var f32 float = float32(i32)
+
+var u32 uint = 1
+u16 := uint16(u32)
+----
+
+[#const-keyword]
+== `const` 关键字
+
+常量的声明与变量类似，只不过是使用 `const` 关键字。常量可以是字符、字符串、布尔值或数值。常量不能用 `:=` 语法声明。
+
+数值常量是高精度的值。一个未指定类型的常量由上下文来决定其类型。再尝试一下输出 `needInt(Big`) 吧。
+
+[source,golang]
+----
+const Pi = 3.14
+const (
+    // 将 1 左移 100 位来创建一个非常大的数字
+    // 即这个数的二进制是 1 后面跟着 100 个 0
+    Big = 1 << 100
+    // 再往右移 99 位，即 Small = 1 << 1，或者说 Small = 2
+    Small = Big >> 99
+)
+----
