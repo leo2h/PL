@@ -1,0 +1,24 @@
+= 数组和其他集合类的使用
+
+[#kw-struct]
+== `struct` 关键字
+
+.语法：
+[source,text]
+----
+StructType    = "struct" "{" { FieldDecl ";" } "}" .
+FieldDecl     = (IdentifierList Type | EmbeddedField) [ Tag ] .
+EmbeddedField = [ "*" ] TypeName [ TypeArgs ] .
+Tag           = string_lit .
+----
+
+.Example
+[source,go]
+----
+include::example$struct-keyword.go[]
+----
+
+== 数组
+
+[#kw-map]
+== 映射

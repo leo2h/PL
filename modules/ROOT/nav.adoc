@@ -3,3 +3,4 @@
 ** xref:go:hello-world.adoc[]
 ** xref:go:basic-datatypes.adoc[]
 ** xref:go:basic-syntax.adoc[]
+** xref:go:datatypes.adoc[]

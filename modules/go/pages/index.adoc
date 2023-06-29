@@ -1,36 +1,146 @@
 = Go 语言
+:url-a-tour-of-go: https://tour.go-zh.org/welcome/1
+:url-spec: https://go.dev/ref/spec
 
 == 关键词
 
 [cols="1,1,1,1,1"]
 |===
-|xref:basic-syntax.adoc#for-keyword[`break`]
-|xref:basic-syntax.adoc#switch-keyword[`default`]
-|xref:basic-syntax.adoc#func-keyword[`func`]
+|xref:basic-syntax.adoc#kw-break[`break`]
+|xref:basic-syntax.adoc#kw-switch[`default`]
+|xref:basic-syntax.adoc#kw-func[`func`]
 |interface
-|xref:basic-syntax.adoc#select-keyword[`select`]
+|select
 
-|xref:basic-syntax.adoc#switch-keyword[`case`]
-|xref:basic-syntax.adoc#defer-keyword[`defer`]
+|xref:basic-syntax.adoc#kw-switch[`case`]
+|xref:basic-syntax.adoc#kw-defer[`defer`]
 |go
-|map
-|struct
+|xref:datatypes.adoc#kw-map[`map`]
+|xref:datatypes.adoc#kw-struct[`struct`]
 
 |chan
-|xref:basic-syntax.adoc#if-keyword[`if`]
-|xref:basic-syntax.adoc#goto-keyword[`goto`]
-|xref:basic-syntax.adoc#package-keyword[`package`]
-|xref:basic-syntax.adoc#switch-keyword[`switch`]
+|xref:basic-syntax.adoc#kw-if[`else`]
+|xref:basic-syntax.adoc#kw-goto[`goto`]
+|xref:basic-syntax.adoc#kw-package[`package`]
+|xref:basic-syntax.adoc#kw-switch[`switch`]
 
-|xref:basic-datatypes.adoc#const-keyword[`const`]
-|xref:basic-syntax.adoc#fallthrough-keyword[`fallthrough`]
-|xref:basic-syntax.adoc#if-keyword[`if`]
-|xref:basic-syntax.adoc#range-keyword[`range`]
-|type
+|xref:basic-datatypes.adoc#kw-const[`const`]
+|xref:basic-syntax.adoc#kw-fallthrough[`fallthrough`]
+|xref:basic-syntax.adoc#kw-if[`if`]
+|xref:basic-syntax.adoc#kw-range[`range`]
+|xref:basic-syntax.adoc#kw-type[`type`]
 
-|xref:basic-syntax.adoc#continue-keyword[`continue`]
-|xref:basic-syntax.adoc#for-keyword[`for`]
-|xref:basic-syntax.adoc#import-keyword[`import`]
-|xref:basic-syntax.adoc#func-keyword[`return`]
-|xref:basic-datatypes.adoc#var-keyword[`var`]
+|xref:basic-syntax.adoc#kw-continue[`continue`]
+|xref:basic-syntax.adoc#kw-for[`for`]
+|xref:basic-syntax.adoc#kw-import[`import`]
+|xref:basic-syntax.adoc#kw-return[`return`]
+|xref:basic-datatypes.adoc#kw-var[`var`]
 |===
+
+== 算数操作符
+
+[cols="1,1,3"]
+|===
+3+|数学运算符
+
+|`+` |加法 |integers, floats, complex values, strings
+
+|`-` |减法 |integers, floats, complex values
+
+|`*` |乘法 |integers, floats, complex values
+
+|`/` |除法 |integers, floats, complex values
+
+|`%` |求余 |integers
+
+3+|位操作
+
+|`&`  |bitwise AND |integers
+
+|`\|` |bitwise OR  |integers
+
+|`^`  |bitwise XOR |integers
+
+|`&^` |bit clear   |integers
+
+|`<<` |left shift  |`integer << integer`
+
+|`>>` |right shift |`integer >> integer`
+
+3+|对比操作符
+
+|`==` |equal     |&nbsp;
+
+|`!=` |not equal |&nbsp;
+
+|`<`  |less      |&nbsp;
+
+|`<=` |less or equal |&nbsp;
+
+|`>`  |greater |&nbsp;
+
+|`>=` |greater or equal |&nbsp;
+
+3+|逻辑操作符
+
+|`&&`   |conditional AND |&nbsp;
+
+|`\|\|` |conditional OR  |&nbsp;
+
+|`!`    |conditional NOT |&nbsp;
+
+3+|一元操作符
+
+|`+x` |positive |&nbsp;
+
+|`-x` |negative |&nbsp;
+
+|`^x` |bitwise complement |&nbsp;
+
+3+|地址操作符
+
+|`&x` |reference   |&nbsp;
+
+|`*x` |dereference |&nbsp;
+
+3+|Receive operator
+
+|`<-` |&nbsp; |`x, ok := <-ch`
+
+3+|Receive operator
+
+|`=`  |赋值   |&nbsp;
+
+|`+=`  |&nbsp;   |&nbsp;
+
+|`-=`  |&nbsp;   |&nbsp;
+
+|`*=`  |&nbsp;   |&nbsp;
+
+|`/=`  |&nbsp;   |&nbsp;
+
+|`%=`  |&nbsp;   |&nbsp;
+
+|`&=`  |&nbsp;   |&nbsp;
+
+|`|=`  |&nbsp;   |&nbsp;
+
+|`^=`  |&nbsp;   |&nbsp;
+
+|`<<=`  |&nbsp;   |&nbsp;
+
+|`>>=`  |&nbsp;   |&nbsp;
+
+|`&^=`  |&nbsp;   |&nbsp;
+
+|`:=` |&nbsp; |&nbsp;
+
+|`++` |&nbsp; |&nbsp;
+
+|`--` |&nbsp; |&nbsp;
+|===
+
+== 参考资料
+
+* {url-a-tour-of-go}[A tour of Go]
+* {url-spec}[The Go Programming Language Specification]

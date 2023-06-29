@@ -2,65 +2,82 @@
 
 == 声明变量
 
-[#var-keyword]
+[#kw-var]
 === 使用 `var` 关键字
 
-在 `Go` 中，如果一个名字以大写字母开头，那么它就是已导出的。例如，`Pizza` 就是个已导出名 `Pi` 也同样，它导出自 `math` 包。`pizza` 和 `pi` 并未以大写字母开头，所以它们是未导出的。在导入一个包时，你只能引用其中已导出的名字。任何“未导出”的名字在该包外均无法访问。
+在 `Go` 中，如果一个名字以大写字母开头，那么它就是已导出的。例如，`Pizza` 就是个已导出名，`Pi` 也同样，它导出自 `math` 包。`pizza` 和 `pi` 并未以大写字母开头，所以它们是未导出的。在导入一个包时，你只能引用其中已导出的名字。任何“未导出”的名字在该包外均无法访问。
 
-（参考 http://blog.go-zh.org/gos-declaration-syntax[这篇] 关于 `Go` 语法声明的文章了解这种类型声明形式出现的原因。）
+参考 http://blog.go-zh.org/gos-declaration-syntax[这篇] 关于 `Go` 语法声明的文章了解这种类型声明形式出现的原因。
 
-[source,golang]
+[source,go]
 ----
-var var_in_package int
+var notExportedNameInPackage int
+var ExportedNameInPackage int
 
 func main() {
     var i int           // <1>
     var f float32 = 1.0 // <2>
 }
 ----
-<1> 没有指定初始值的声明，会使用对应类型的“零值”初始化变量，而不是保留变量的未初始化状态
+<1> 没有指定初始值的声明，会使用对应类型的“零值”初始化变量，而不是保留未初始化的状态
 <2> 给定变量的初始值
 
 === 短变量声明
 
-[source,golang]
+[source,go]
 ----
 func main() {
-    i := 1   // i 为 int 类型
-    f := 1.0 // f 为 float64 类型
+    i := 1   // <1>
+    f := 1.0 // <2>
 }
 ----
+<1> type: `int`
+<2> type: `float64`
 
 == `Go` 语言中的基本数据类型及其零值
 
-[source,golang]
+[source,go]
 ----
 include::example$zeros.go[]
 ----
 <1> alias of `uint8`
 <2> alias of `uint32`
 
+== 指针
+
+`Go` 拥有指针。指针保存了值的内存地址。类型 `*T` 是指向 `T` 类型值的指针。其零值为 `nil`。`&` 操作符会生成一个指向其操作数的指针。`*` 操作符表示指针指向的底层值。这也就是通常所说的“间接引用”或“重定向”。与 `C` 不同，`Go` 没有指针运算。
+
+[source,go]
+----
+var i  int = 42
+var p *int
+
+ p = &i // <1>
+*p = 37 // <2>
+ i = *p // <3>
+----
+<1> 获取变量的地址
+<2> write to pointer
+<3> read from pointer
+
 == 类型转换
 
 表达式 `T(v)` 将值 `v` 转换为类型 `T`。
 
-[source,golang]
+[source,go]
 ----
 var i32 int 1
-var f32 float = float32(i32)
-
-var u32 uint = 1
-u16 := uint16(u32)
+var f32 float32 = float32(i32)
 ----
 
-[#const-keyword]
+[#kw-const]
 == `const` 关键字
 
 常量的声明与变量类似，只不过是使用 `const` 关键字。常量可以是字符、字符串、布尔值或数值。常量不能用 `:=` 语法声明。
 
 数值常量是高精度的值。一个未指定类型的常量由上下文来决定其类型。再尝试一下输出 `needInt(Big`) 吧。
 
-[source,golang]
+[source,go]
 ----
 const Pi = 3.14
 const (

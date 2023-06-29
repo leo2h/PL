@@ -3,22 +3,16 @@ package main
 import "fmt"
 
 // tag::func[]
-func add(x int, y int) int {
-  return x + y
-}
-
-func sub(x, y int) int {
-  return x - y
-}
-
-func swap(a, b string) (string, string) {
-  return b, a // 多值返回
-}
+func EmptyFunction() {
   
-func div(x, y uint) (z uint, r uint) { // 命名返回值
-  z = x / y
-  r = x - z * y
-  return
+}
+
+func AddI(a int, b int) int {
+  return a + b
+}
+
+func AddF(a, b float32) float32 {
+  return a + b
 }
 // end::func[]
 

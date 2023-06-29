@@ -1,11 +1,16 @@
 package main
 
 import "fmt"
-import "time"
 
 func main() {
-forever_loop:
-  fmt.Println(time.Now())
-  time.Sleep(2 * time.Second)
-  goto forever_loop;
+  var s int = 0
+  for i := 0; i < 10; i++ {
+    s += i
+    if s > 5 {
+      goto end;
+    }
+  }
+
+end:
+  fmt.Println("end by goto")
 }
