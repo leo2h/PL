@@ -38,6 +38,8 @@ import ( // <1>
 [#kw-func]
 == `func` 关键字 {url-func-spec}[spec]
 
+=== 函数声明
+
 .函数声明语法：
 [source,text]
 ----
